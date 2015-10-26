@@ -1,5 +1,8 @@
 $(document).ready(function() {
-  $(".main-logo").fadeTo(700,1, function() {
+  $(".main-navigation").delay(1000).fadeTo(800,1, function() {
+      $(this).css("pointer-events","auto");
+  });
+  $(".main-logo").delay(300).fadeTo(800,1, function() {
       $(".main-video").css("pointer-events","auto");
   });
 
@@ -10,5 +13,12 @@ $(document).ready(function() {
       });
   },function() {
       $(this).fadeTo(500,0);
+  });
+
+  $(".right-navigator").hover(function() {
+      $(".content").css("left","0%");
+  });
+  $(".left-navigator").hover(function() {
+      $(".content").css("left","100%");
   });
 });

@@ -1,7 +1,22 @@
+@font-face {
+    font-family: 'NeutraBold';
+    src: url('../fonts/NeutraDisplay-Bold.otf'); /
+}
+@font-face {
+    font-family: 'NeutraLight';
+    src: url('../fonts/NeutraText-Light.otf');
+}
+
 body {
+  font-family: "NeutraLight";
   width:100%;
   height:100%;
   margin:0;
+  overflow-x:hidden;
+}
+
+h1,h2,h3,h4,h5 {
+  font-family: "NeutraBold";
 }
 
 .main-logo {
@@ -26,3 +41,74 @@ body {
   opacity:0;
   pointer-events: none;
 }
+
+.content {
+  position:absolute;
+  top:0;
+  left:100%;
+  width:100%;
+  height:auto;
+  min-height:100%;
+  margin:0;
+  transition: left 1.5s;
+  background-color:#00A1A2;
+}
+
+.separator {
+  height:100px;
+}
+
+.main-title  {
+  text-align:center;
+  color:#FFFFFF;
+}
+
+.main-title small {
+  color: #DDDDDD;
+  padding-bottom:25px;
+  border-bottom: 1px solid white;
+}
+
+.staff-thumbnail {
+  text-decoration:none;
+  color:black;
+  text-align:center;
+  padding-bottom:10px;
+}
+
+.main-navigation  {
+    opacity:0;
+    pointer-events:none;
+}
+
+.page-navigator {
+  height:70px;
+  top:50%;
+  margin-top:-35px;
+  width:35px;
+  position:absolute;
+  z-index:100;
+}
+
+.page-navigator span {
+  font-size:30px;
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+}
+
+.left-navigator {
+  left:0px;
+  border-right:1px solid gray;
+}
+
+.right-navigator{
+  right:0px;
+  border-left:1px solid gray;
+  z-index:0;
+}
+
+
+/*
+/////////////////////////////  MEDIA QUERIES ////////////////////////////////////////
+/*
